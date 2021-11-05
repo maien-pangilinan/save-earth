@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Science of Climate Change </title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial scale=1">
+		<script src="https://kit.fontawesome.com/83105370b1.js" crossorigin="anonymous"> </script>
+		<link href="https://fonts.googleapis.com/css?family=Be Vietnam Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Be Vietnam" rel="stylesheet">
+
+
+	<style>
+		html {scroll-behavior: smooth;}
+
+			/* Home page opening */
+			.navlinks {font-size:20px; font-family:"be vietnam pro"; position:fixed; z-index: 3; background:white; padding-top:10px; padding-bottom:10px;
+			width:100%; overflow:hidden; text-shadow: 1px 2px #999999; box-shadow:0px 2px 3px grey; top:0}
+			.nlspacing1 {letter-spacing:4px; word-spacing:5px; padding-right:10px; padding-left:20px;}
+			.nlspacing2 {letter-spacing:2px; word-spacing:8px;  padding-right:10px; padding-left:5px; float:right}
+			.navlink {color:#000; text-decoration:none} .navlink:visited {color:#000} .navlink:hover {color:#d6dbdb} .navlink:active {color:#b5bdbf}
+			.navlinks2 {word-spacing:15px; font-size:20px; position:relative; left:380px; top:25px; font-family:"be vietnam pro"; z-index:2;}
+
+
+
+			/* Flip Cards */
+			.flip-card {background-color: transparent; width: 340px; height: 340px; perspective: 1000px; float:left; margin:60px 35px 0px 48px; 
+			font-family:"be vietnam pro"; text-align:center; border-radius: 25px}
+
+			.flip-card-inner {position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d;}
+
+			.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+
+			.flip-card-front, .flip-card-back {position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; 
+			backface-visibility: hidden; border-radius: 25px}
+
+			.flip-card-front {background-color: #fff; color: black;}
+
+			.flip-card-back {background-color: #fff; color: black; transform: rotateY(180deg); text-align:right; font-family:"helvetica"}
+			.fp_b1 {padding: 0px 20px 0px 20px;}
+			.fp_b2 {padding: 0px 15px 0px 5px;}
+			/* Home backgrounds */
+				.home_bg {background-position:center; background-repeat:no-repeat; background-size:cover}
+				.bg {background:black; max-width:100%}
+				.bg1 {background-image: url("last.jpeg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; 
+				background-size: cover; position:absolute; top:27500px; height:680px;} 
+				.bg2 {background:white; background-attachment: fixed; background-position: center; background-repeat: no-repeat; 
+				background-size: cover; position:absolute; top:2700px; height:680px;}
+
+			/* Home topics */
+				.home_topics {max-width:100%; font-family:"Helvetica"; z-index: 2}
+				.home_topic {font-size:30px; position:relative; margin-top:30px; margin-left:550px; font-family:"be vietnam"}
+				.home_subtopic {font-size:20px; position:relative; text-align:justify; margin-top: 40px; text-align:center; line-height:1.5; 
+				font-family:"be vietnam";}
+				.home_topic1 {font-size:30px; position:relative; margin-top: 60px; margin-left:80px; font-weight:bold}
+				.home_subtopic1 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic2 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic3 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic3 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic4 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic4 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic5 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic5 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic6 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic6 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic7 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic7 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic8 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic8 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic9 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic9 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic10 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic10 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic11 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic11 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic12 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic12 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic13 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic13 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic13_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 40px; line-height: 1.5}
+				.home_topic14 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic14 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic14_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 40px; line-height: 1.5}
+				.home_topic15 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic15 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic16 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic16 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic17 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic17 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic18 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic18 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic19 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic19 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic20 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic20 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic20_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic21 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic21 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic22 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic22 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic23 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic23 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic24 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic24 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic25 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic25 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic26 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic26 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic27 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic27 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic28 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic28 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic28_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic29 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic29 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic30 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic30 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic31 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic31 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic32 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic32 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}				.home_topic33 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic33 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}				.home_topic34 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic34 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic34_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic35 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic35 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic35_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic36 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px; font-weight:bold}
+				.home_subtopic36 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic36_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic37 {font-size:30px; position:relative; margin-top: 110px; margin-left:80px; font-weight:bold}
+				.home_subtopic37 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_subtopic37_2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+				.home_topic38 {font-size:40px; position:relative; text-align:justify; margin: 450px 80px 40px 200px; line-height: 1.5; word-spacing:20px}
+
+
+
+			/* Home parallax */
+			.parallax {background-image: url("ems spectrum.jpeg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; 
+			background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax2 {background-image: url("radio waves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax3 {background-image: url("microwaves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax4 {background-image: url("infrared waves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax5 {background-image: url("visible light waves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax6 {background-image: url("uv waves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax7 {background-image: url("xray waves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax8 {background-image: url("gamma ray waves.gif"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax9 {background-image: url("radiation climate change.png"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax10 {background-image: url("radiations.jpeg"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			.parallax11 {background-image: url("ems.jpeg"); background-attachment: fixed; background-position: center; background-repeat: 
+			no-repeat; background-size: cover; position:relative; top:40px; height:450px; opacity:0.8}
+
+			body {background:black; font-family:"helvetica"; max-width:100%; margin:0}
+			.bf {color:#000}
+			.wf {color:#fff}
+			a:link {color:#fff; text-decoration:none} a:visited {color:#fff} a:hover {color:#d6dbdb} a:active {color:#b5bdbf}}
+
+	</style>
+	</head>
+	<body>
+ 
+		<!-- Right navbar links -->
+			<span class="navlinks" id="home">
+				<a class="navlink nlspacing1" href="Group Integrative Assessment.html"> <i class="fas fa-globe-americas"> </i> SAVE EARTH </a>
+				<a class="navlink nlspacing2" href="Trigonometry for Climate Change.html"> TRIGONOMETRY </a>
+				<a class="navlink nlspacing2" href="Solutions for Climate Change.html"> SOLUTIONS </a>
+				<a class="navlink nlspacing2" href="Effects of Climate Change.html"> EFFECTS </a>
+				<a class="navlink nlspacing2" href="Science of Climate Change.html"> SCIENCE </a>
+				<a class="navlink nlspacing2" href="Causes of Climate Change.html"> CAUSES </a>
+				<a class="navlink nlspacing2" href="Evidences of Climate Change.html"> EVIDENCES </a>
+				<a class="navlink nlspacing2" href="Group Integrative Assessment.html"> HOME </a>
+
+			</span>
+
+<br>
+
+		<div class="flip-card">
+		<div class="flip-card-inner">
+		<div class="flip-card-front">	
+			<img src="radiation.png" style="width:300px; height:300px;"> 
+			<b> Radiation in a Nutshell </b>
+		</div>
+		<div class="flip-card-back fp_b1">
+		<p align="justify"> The transmission or emission of energy in the form of particles or waves through a material medium or space is known as radiation. The energy of the radiated particle determines whether the radiation is non-ionizing or ionizing. The most prevalent sources of ionizing radiation are radioactive materials that generate alpha (α), beta (β), or gamma (γ) radiation. Non-ionizing radiation is often produced by visible light, microwaves, and infrared light. Despite their few advantages, both forms of radiation are hazardous to one's health.
+		</p>
+		</div>
+		</div>
+		</div>
+
+		<div class="flip-card">
+		<div class="flip-card-inner">
+		<div class="flip-card-front">
+			<img src="radiation effects.png" style="width:300px; height:300px;"> 
+			<b> Effects of Radiation on Climate Change </b>
+		</div>
+		<div class="flip-card-back fp_b1">
+		<p align="justify"> To give us a quick overview of how radiation can affect climate change, the earth converts visible light energy into infrared light energy, which is absorbed by greenhouse gases and departs Earth slowly. When people emit greenhouse gases, energy departs Earth at a slower rate, raising the planet's temperature. <br> <br> The effects of radiation on climate Change will be covered in greater detail in the following sections of this web page, so stay tuned!
+		</p>
+		</div>
+		</div>
+		</div>
+
+		<div class="flip-card">
+		<div class="flip-card-inner">
+		<div class="flip-card-front">
+			<img src="ems terminology.jpeg" style="width:250px; height:250px; margin-top:20px; padding-bottom:30px"> 
+			<b> Electromagnetic Spectrum Terminologies </b>
+		</div>
+		<div class="flip-card-back fp_b2">
+		<ul type="disc" align="justify"> 
+			<li> Amplitude: The height of a wave is measured from its center location. </li>
+			<li> Energy: A measure of its capacity, expressed as the amount of work it takes to go from one condition to another. It is expressed in joules (SI units). </li>
+			<li> Frequency: The number of times a periodic function or vibration repeats itself in a given amount of time, usually one second. The frequency is commonly expressed in hertz. </li>
+			<li> Hertz (Hz): Derived SI unit of frequency; refers to the frequency of a periodic phenomena with a periodic time of one second; one cycle per second. </li>
+		</ul>
+		</div>
+		</div>
+		</div>
+
+		<div class="home_topic38 wf"> #AtomforPeace #MandsciChemiunity #IamAware </div>
+
+		<hr align="center" color="#a6a6a6" style="width:1000px; position:relative; top:0px; clear:left;">
+		
+
+		<div class="home_topic1 wf"> The Discovery and History of the Electromagnetic Theory </div>
+		<p class="home_subtopic1 wf"> Once upon a time, electricity and magnetism were thought to be two distinct forces. However, James Clerk Maxwell, a Scottish physicist, created a unified theory of electromagnetic in 1873. The study of electromagnetism is concerned with the interactions of electrically charged particles with one another and magnetic fields. <br> <br> Electromagnetic interactions are divided into four types: </p>
+		<ul type="disc" class="home_subtopic1 wf">
+		<li> The square of the distance between two electric charges determines the force of attraction or repulsion between them. </li>
+		<li> Magnetic poles are arranged in pairs and, like electric charges, attract and repel each other. </li>
+		<li> A magnetic field is created by an electric current in a wire, and its direction is determined by the current's direction. </li>
+		<li> A magnetic field is created by a moving electric field, and vice versa. </li>
+		</ul>
+		<p class="home_subtopic1 wf"> To characterize these occurrences, Maxwell devised a series of formulas known as Maxwell's equations. </p>
+
+
+		<div class="parallax"> </div>
+
+
+		<div class="home_topic2 wf"> An Overview of the Electromagnetic Spectrum </div>
+		<p class="home_subtopic2 wf"> In the spectrum of electromagnetic waves, the electromagnetic spectrum is a range of frequencies, wavelengths, and photon energies ranging from below 1 Hertz to above 1025 Hertz, equivalent to wavelengths ranging from a few kilometres to a fraction of the size of an atomic nucleus. Electromagnetic waves tend to travel at speeds similar to light in a vacuum. They do so, however, at a variety of wavelengths, frequencies, and photon intensities. <br> <br> The electromagnetic spectrum is made up of various subranges that are referred to as parts. Infrared, visible light, and ultraviolet radiation are the different types of light. <br> <br> The characteristics of electromagnetic waves in these different bands vary depending on how they are generated, how they interact with matter, and how they are used in practical applications. According to Maxwell's equations, electromagnetic waves can have an endless number of frequencies and move at the speed of light. This is the first evidence that the electromagnetic spectrum as a whole exists. <br> <br> The electromagnetic spectrum's major significance is that it may be used to classify electromagnetic waves and arrange them according to their various frequencies or wavelengths. </p>
+		<div class="home_topic3 wf"> The Seven Regions of the Electromagnetic Spectrum </div>
+		<p class="home_subtopic3 wf"> Radio waves, Microwaves, Infrared Radiation, Visible Light, Ultraviolet Radiation, X-rays, and Gamma Rays make up the full range of the Electromagnetic Spectrum in increasing frequency and decreasing wavelength order. </p>
+
+
+		<div class="parallax2"> </div>
+
+
+		<div class="home_topic4 wf"> Radio Waves: Key Concepts to Remember </div>
+		<ul class="home_subtopic4 wf"> 
+		<li> Radio waves are a part of the electromagnetic spectrum with frequencies ranging from 300 GHz to 3 kHz and wavelengths ranging from 1 mm to 100 km. </li>
+		<li> Radio waves have lowest energies, have the longest wavelengths, and have the lowest frequencies of any type of EM radiation. </li>
+		<li> AM radio waves: These are the waves that transmit radio signals at frequencies ranging from 540 to 1600 kHz. The waves carried are commercial waves with varying amplitudes but constant frequencies. </li>
+		<li> FM radio waves: These are the waves that transmit radio signals at frequencies ranging from 88 to 108 MHz. The waves carried are commercial waves with modulated frequencies but constant amplitudes. </li>
+		<li> Radio waves are mostly utilized in communication systems such as broadcasting, communication satellites, computer networking systems, radar, and other types of navigation. In the medical industry, radio waves are also used in MRI scans. </li>
+		<li> The issue with radio waves is that they must be regulated in order to be used in specific bands. </li>
+		</ul>
+		<div class="home_topic5 wf"> An Introduction to Radio Waves </div>
+		<p class="home_subtopic5 wf"> According to NASA, radio waves have the longest wavelengths in the electromagnetic spectrum, ranging from 0.04 inches (1 millimeter) to more than 62 miles (100 kilometers). They also have the lowest frequencies, ranging from roughly 3,000 cycles per second (3 kHz) to around 300 billion hertz (3 gigahertz). Because radio waves are so long, instead of seeing point sources like stars and clouds using a radio telescope, you can observe vast areas that stimulate star formation, distant quasars, and possible supernova remnants. The energy levels and frequency of these waves are low, ranging from roughly 3 kHz to around 300 GHz. <br> <br> Natural sources such as lightning and celestial occurrences can generate radio waves, as can artificial sources such as broadcast radio towers, cell phones, satellites, and radar. AM radio waves, which have a frequency range of 540 to 1600 kHz, are utilized to transmit commercial radio transmissions. The process for placing information on these waves is called amplitude modulation, which is abbreviated as AM. The frequency of AM waves is constant, while the amplitude varies. In the frequency range of 88 to 108 MHz, FM radio waves are also employed for commercial radio transmission. Frequency modulation (FM) creates a wave with a constant amplitude but variable frequency. <br> <br> Radio waves are typically generated by radio transmitters and received by radio receivers. Distinct frequencies of radio waves have different propagation characteristics in the Earth's atmosphere. Long waves are diffracted around various barriers and follow the contour, but short waves reflect the ionosphere and return beyond the sky wave horizon. Because short wavelengths bend or diffract minimally and travel in a straight line, the propagation distance of both waves is restricted to the visual horizon. </p>
+		<div class="home_topic6 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic6 wf"> Radio waves are commonly utilized in communication systems such as broadcasting, communication satellites, computer networking systems, radar, and other types of navigation due to their wide range. They're also utilized in things like traditional broadcast radio and television, shortwave radio, navigation and air traffic control, cellular telephony, and even remote-controlled toys. Various frequencies of radio waves are also utilized for television and FM and AM radio broadcasts, military communications, mobile phones, ham radio, wireless computer networks, and a variety of other communications applications. <br> <br> Meanwhile, in the field of life sciences, magnetic resonance imaging (MRI) examines organs and structures within the body using a large magnet and radio waves. In a resonance process sensitive to nuclei density, radio waves are broadcast, absorbed, and reemitted (usually protons or hydrogen nuclei). MRI scans are used by doctors to diagnose a wide range of conditions, from torn ligaments to tumors. For examining the brain and spinal cord, MRIs are extremely useful. It's worth noting that the strength of the radio waves used in MRI poses little or no risk to human health. </p>
+		<div class="home_topic7 wf"> The Issues with Radio Waves </div>
+		<p class="home_subtopic7 wf"> The only issue with radio waves is that they must be controlled for band use. Astronomers and astrophysicists use electromagnetic waves to collect signals from space. The "pollution" from electromagnetic radiation saturating our surroundings from communication networks in general is a common topic for astrophysicists. Even commonplace devices, such as our vehicle keys' ability to remotely lock car doors and turn TVs on and off using remotes, use radio-wave frequencies. To prevent interference between all of these electromagnetic signals, strict regulations for various organizations to use distinct radio frequency bands are developed. <br> <br> That is why we are sometimes asked to turn off our mobile phones (operating in the 1.9 GHz range) on airplanes and in hospitals because important communications or medical equipment frequently uses similar radio frequencies and their operation can be affected by frequencies used in communication devices. </p>
+
+
+		<div class="parallax3"> </div>
+
+
+		<div class="home_topic8 wf"> Microwaves: Key Concepts to Remember </div>
+		<ul type="disc" class="home_subtopic8 wf"> 
+			<li> Microwaves are electromagnetic waves with long wavelengths of 0.04 to 12 inches and short frequencies of up to 300 GHz. </li>
+			<li> Microwaves, located in the electromagnetic spectrum between radio waves and infrared, have a wide range of applications in cooking and heating, communications, and radar. </li>
+			<li> Microwaves used in large amounts can cause painful body burns and eye cataracts. </li>
+		</ul>	
+		<div class="home_topic9 wf"> An Introduction to Microwaves </div>
+		<p class="home_subtopic9 wf"> Microwaves are electromagnetic waves with frequencies ranging from 300 MHz to 300 GHz and wavelengths ranging from 1 mm to roughly 30 cm. Microwaves are often used to represent microwave radiation. In the electromagnetic spectrum, they are found between infrared radiation and radio waves. The following are some of the microwave's properties: </p>
+		<ul type="disc" class="home_subtopic9 wf">
+		<li> Microwaves are reflected off of metal surfaces. Microwaves of a specific wavelength travel through the Earth's atmosphere and can be used to send data to and from orbiting satellites. As a result, because metal reflects microwaves well, satellite dishes are constructed of it. </li>
+		<li> Water absorbs microwaves of particular frequency. Microwaves are useful in the kitchen because of this feature. Microwaves absorb water in food, causing the water to heat up and cook the food. </li>
+		<li>Microwave transmission is influenced by wave effects like refraction, reflection, interference, and diffraction. </li>
+		<li> Microwaves are able to penetrate glass and plastic. This is why, in a microwave oven, we use a plastic or glass container rather than a metal container, as metal reflects microwaves. </li>
+		</ul>
+		<p class="home_subtopic9 wf"> Artificial devices such as circuits, transmission towers, radar, masers, and microwave ovens, as well as natural sources such as the Sun and the Cosmic Microwave Background, are examples of microwave sources. Atoms and molecules can also generate microwaves. They are, for example, a component of thermal agitation-generated electromagnetic radiation. At temperatures above absolute zero, the thermal motion of atoms and molecules in any object causes them to produce and absorb radiation. </p>
+		<div class="home_topic10 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic10 wf"> One of the most common uses of microwaves is to quickly heat food. Microwave ovens are conceivable due to the ability of microwaves to convey thermal energy. The early microwave ovens were quite huge and expensive, but they have subsequently grown so accessible that they are now found in almost every home across the world. Microwave heating systems are also employed in a variety of industrial applications, including batch and continuous food, chemical, and materials processing. <br> <br> According to the Federal Communications Commission (FCC), microwaves are also utilized in point-to-point communications networks to transmit various forms of information, including voice, data, and video in both analog and digital formats. They are also utilized for supervisory control and data acquisition (SCADA) for remote machines, switches, valves and signals.  Various research institutes have also identified the following microwave applications: </p>
+		<ul type="disc" class="home_subtopic10 wf">
+		<li> Microwave technology underpins the majority of wireless transmission technologies. They are useful for transmitting signals over vast distances as long as there are no impediments. </li>
+		<li> Satellites can use microwaves to send signals to the Earth. </li>
+		<li> Microwaves are utilized as a channel for delivering data between mobile devices. </li>
+		<li> Wi-Fi signals from laptops are often transmitted at 2.4 GHz. </li>
+		<li> GPS is a technology that broadcasts microwave signals from satellites orbiting the Earth. </li>
+		<li> Microwaves are utilized in radar because they may be sent in a single direction as a single beam. </li>
+		</ul>
+		<p class="home_subtopic10 wf"> Microwaves are also increasingly being used in a variety of medical applications. Cardiology, oncology, and rhizotomy are a few examples. Aside from that, microwaves are utilized for "deep heating," also known as microwave diathermy, which is used to treat muscular aches, spasms, tendinitis, and rheumatoid arthritis. <br> <br> Moreover, probably the most famous sighting of extraterrestrial microwaves was made by two Bell Labs scientists who were working on a telecommunications system that used a massive ground-based horn antenna. Penzias and Wilson received the Nobel Prize in Physics in 1978 for their discovery of the Cosmic Microwave Background. Satellites have subsequently mapped the cosmic microwave background radiation with considerable accuracy. These investigations revealed the minute temperature fluctuations that evolved into the galaxy clusters we recognize today. </p>
+		<div class="home_topic11 wf"> Risks to Health and Well-Being from Microwaves </div>
+		<p class="home_subtopic11 wf"> Microwave radiation has the ability to heat body tissue in the same way that it can heat food. Microwave exposure at high levels can result in a painful burn. Because there is little blood flow in these areas, the eyes and testes are particularly vulnerable to RF heating. Furthermore, the lens of the eye is extremely sensitive to high temperatures, and prolonged exposure to microwaves can cause cataracts. However, these types of injuries – burns and cataracts – can only be caused by excessive microwave radiation exposure. </p>
+
+
+		<div class="parallax4"></div>
+
+
+		<div class="home_topic12 wf"> Infrared Waves: Key Concepts to Remember </div>
+		<ul type="disc" class="home_subtopic12 wf"> 
+			<li> Microwaves are electromagnetic waves with long wavelengths of 0.04 to 12 inches and short frequencies of up to 300 GHz. </li>
+			<li> Microwaves, located in the electromagnetic spectrum between radio waves and infrared, have a wide range of applications in cooking and heating, communications, and radar. </li>
+			<li> Microwaves used in large amounts can cause painful body burns and eye cataracts. </li>
+		</ul>	
+		<div class="home_topic13 wf"> An Introduction to Infrared Waves </div>
+		<p class="home_subtopic13 wf"> Infrared radiation (IR), often known as infrared light, is a type of electromagnetic radiation (EMR) that has wavelengths that are longer than visible light. As a result, it is imperceptible to the naked eye, albeit IR from specifically pulsed lasers with wavelengths up to 1050 nanometers (nm) can be seen by humans under particular situations. Infrared light has a wavelength range of 700 nanometers to 1 millimeter, which is the indicated red edge of the visible spectrum. Near-room-temperature items emit the majority of their thermal radiation in the form of infrared. IR, like all EMR, carries radiant energy and operates both as a wave and as the photon, its quantum particle. Infrared light is classified into five groups based on wavelength and frequency: near-wavelength, short-wavelength, mid-wavelength, long-wavelength, and far-infrared. The qualities of infrared waves are listed below. </p>
+		<ul type="disc" class="home_subtopic13 wf">
+		<li> Transverse Waves </li>
+		<p class="home_subtopic13_2 wf"> According to Serway's College Physics, an infrared wave is a transverse wave, meaning that its displacement is perpendicular to the wave's propagation direction. </p>
+		<li> Wavelength </li>
+		<p class="home_subtopic13_2 wf"> Infrared waves have distinct wavelengths that are often measured in microns. A micron is one millionth of a metre in length. An infrared wave has a wavelength of roughly 0.7 microns. An infrared wave has a wavelength of 350 microns. According to research, the maximum wavelength of any infrared radiation is 1000 microns. </p>
+		<li> Speed </li>
+		<p class="home_subtopic13_2 wf"> Infrared waves travel at a speed of 299,792,458 m.s-1. </p>
+		<li> Particle or Wave? </li>
+		<p class="home_subtopic13_2 wf"> Infrared waves, according to quantum theory, can exist as both waves and particles at the same time. </p>
+		<li> Absorption and Reflection </li>
+		<p class="home_subtopic13_2 wf"> The nature of the substance that infrared waves strike determines whether they are absorbed or reflected. Infrared radiation is absorbed by materials like ozone, carbon dioxide, and water vapour. The materials that reflect infrared radiation are snow and aluminum foil. </p>
+		<li> Refraction and Interference </li>
+		<p class="home_subtopic13_2 wf"> When infrared waves move from one medium to another, they display the property of refraction, which causes a minor shift in direction. The infrared wave's refraction property can be observed in the earth's atmosphere. When two infrared waves with the same wavelength collide, they interfere with each other. </p>
+		<li> Thermal Properties </li>
+		<p class="home_subtopic13_2 wf"> Because infrared radiation has thermal qualities, it can be used to generate heat. When infrared radiation reaches oxygen or nitrogen molecules, it causes the molecules to travel faster as they gain energy. As a result, infrared radiation causes materials to heat up and can thus be employed as a heat source. </p>
+		</ul>
+		<div class="home_topic14 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic14 wf"> Infrared waves are used in the following ways: </p>
+		<ul type="disc" class="home_subtopic14 wf">
+		<li> Communications </li>
+		<p class="home_subtopic14_2 wf"> Since  infrared lasers are fairly inexpensive, they are employed for free-space optical communications. These are also useful in densely crowded places. </p>
+		<li> Spectroscopy </li>
+		<p class="home_subtopic14_2 wf"> The molecules are identified using infrared vibrational spectroscopy, which analyzes their bonds as they vibrate at different frequencies. </p>
+		<li> Astronomy </li>
+		<p class="home_subtopic14_2 wf"> To examine objects in space, optical components such as mirrors, lenses, and digital detectors are used. When these objects are subjected to radiated heat, they glow. Astronomers employ infrared wavelengths to investigate objects from space using optical instruments such as mirrors, solid-state digital detectors, and lenses. With the use of an infrared telescope, images from these optical devices are obtained. </p>
+		<li> Heat Source </li>
+		<p class="home_subtopic14_2 wf"> Infrared radiation is used as a heat source in two different industries, which are: </p>
+		<ul type="circle" class="home_subtopic14 wf">
+			<li> Medical uses: Infrared radiation finds application as a heating source. There are infrared saunas which are used for treating high blood pressure, rheumatoid arthritis, and high blood pressure which are chronic health problems. Infrared radiation is considered to be one of the safest methods of physiotherapy. </li>
+			<li> Manufacturing industries: Industries which concentrate on manufacturing processes such as forming of plastics, curing of coatings, plastic welding, etc use infrared heaters in place of contact heating and convection ovens. </li>
+		</ul>
+		<li> Cosmetology Application </li>
+		<p class="home_subtopic14_2 wf"> Infrared waves are commonly utilized for cosmetic purposes, such as healing skin injuries, smoothing wrinkles, minimizing the appearance of dandruff and blackheads, and so on. The utilization of infrared rays is due to their ability to penetrate the skin up to 3-4 mm. They also warm the skin, which improves blood circulation and provides the skin with a constant supply of oxygen and other nutrients. </p>
+		<li> Therapeutic Massage </li>
+		<p class="home_subtopic14_2 wf"> Infrared radiation is used to heat the skin and relax the muscles. Because of their outstanding penetration into the skin, infrared rays are favored. </p>
+		<li> Infrared Photography </li>
+		<p class="home_subtopic14_2 wf"> Infrared photography employs the use of infrared filters to capture images. This imaging is done for near-infrared objects. Infrared blockers are used in most digital cameras, causing near-infrared to look purple-white in the final image. </p>
+		<li> Infrared Communication </li>
+		<p class="home_subtopic14_2 wf"> In short-range communication, data transmission using infrared light is prevalent. Infrared light-emitting diodes, which generate infrared radiation and are concentrated into a narrow beam using a plastic lens, are utilized to encode the data. A photodiode is used to convert infrared radiation into electrical current at the receiver end. </p>
+		</ul>	
+		<div class="home_topic15 wf"> Infrared Radiation and The Greenhouse Effect </div>
+		<p class="home_subtopic15 wf"> The Sun is a significant source of energy on Earth. That energy primarily reaches Earth in the form of visible, infrared, and ultraviolet light, with the majority of it passing through the atmosphere to warm the surface. This energy from the Sun is absorbed by the Earth and reemitted as invisible infrared light. The greenhouse effect traps this energy. Greenhouse gases have a variety of forms that allow them to absorb infrared light released by the Earth. Methane is particularly excellent at this, and other greenhouse gases, such as carbon dioxide, are also effective in absorbing infrared light. The energy is reemitted by these gases to other greenhouse gases and then back to the Earth's surface. Infrared radiation is absorbed ineffectively by nitrogen and oxygen because of their forms. Humans have increased the amount of carbon dioxide in the atmosphere by burning fossil fuels such as coal and using oil as energy sources. Earth's surface temperatures warm when more greenhouse gases are introduced to the atmosphere. <br> <br> To learn more about this topic, <a href="#9"> <i> click here. </i> </a>
+
+
+		<div class="parallax5"></div>
+
+
+		<div class="home_topic16 wf"> Visible Light Waves: Key Concepts to Remember </div>
+		<ul type="disc" class="home_subtopic16 wf"> 
+			<li> The only electromagnetic waves that we can see are visible light waves. </li>
+			<li> Vibrations and rotations of atoms and molecules, as well as electronic changes inside atoms and molecules, produce visible light. </li>
+			<li> These waves can be visualized as the colors of the rainbow, with each color containing a different wavelength. </li>
+			<li> Red Light: Visible light waves with the shortest wavelengths and lowest frequency. </li>
+			<li> Violet Light: Light waves with the highest frequency and shortest wavelengths that can be seen. </li>
+		</ul>
+		<div class="home_topic17 wf"> An Introduction to Visible Light </div>
+		<p class="home_subtopic17 wf"> The visible range of the electromagnetic spectrum is the portion of the spectrum to which the human eye responds. Between infrared and ultraviolet, visible light has a frequency of around 4 x 1014 to 8 x 1014 cycles per second and wavelengths of roughly 740 nanometers (2.9 x 10-5 inches) to 380 nm. Electronic transitions within atoms and molecules, as well as vibrations and rotations of atoms and molecules, produce visible light. Electronic transitions are commonly used in light receivers and detectors. When atoms and molecules absorb and emit through electronic transitions, we call them excited and relaxed. <br> <br> These waves can be visualized as the colors of the rainbow, with each color containing a different wavelength. The lowest frequencies and longest wavelengths are found in red light, while the highest frequencies and shortest wavelengths are found in violet light. When all of the waves are observed at the same time, white light is formed. When white light passes through the prism, it is split down into the visible light spectrum's colors. </p>
+		<div class="home_topic18 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic18 wf"> Humans rely heavily on visible light to see and construct mental pictures. Our eyes would be unable to see images of anything if there was no light. Aside from sight, visible light has a variety of other applications. We concentrate visible light to create lasers that are used in a variety of applications, including surgery, CD players, and laser pointers. Our TV, computer, and cell phone screens all work because of visible light waves. <br> <br> Plants and algae that are photosynthetic utilise visible spectrum electromagnetic energy to stimulate the production of sugar molecules. The energy of particular wavelengths of light is absorbed by special pigments in the chloroplasts of plant cells, generating a chemical chain reaction known as the light-dependent processes of photosynthesis. The best visible light wavelengths for photosynthesis are in the blue (425–450 nm) and red (600–700 nm) ranges. As a result, the optimum photosynthetic light sources should preferably emit light in the blue and red bands. </p>
+
+
+		<div class="parallax6"></div>
+
+		<div class="home_topic19 wf"> Ultraviolet Light Waves: Key Concepts to Remember </div>
+		<ul type="disc" class="home_subtopic19 wf"> 
+			<li> UV Light (ultraviolet light) is a form of electromagnetic radiation with a wavelength of 10 to 400 nanometers, which is shorter than visible light but longer than X-rays. </li>
+			<li> UV light can be divided into three types: ultraviolet A (UVA), ultraviolet B (UVB), and ultraviolet C (UVC) </li>
+			<li> UV light is necessary for the production of vitamin D, but it has also been linked to cancer and ozone depletion. </li>
+		</ul>
+		<div class="home_topic20 wf"> An Introduction to Visible Light </div>
+		<p class="home_subtopic20 wf"> UV light is a part of the electromagnetic spectrum that lies between visible light and X-rays. It has wavelengths of around 380 nanometers (1.5 x 10-5 inches) to about 10 nanometers (4 x 10-7 inches) and frequencies of about 8 x 1014 to 3 x 1016 cycles per second, or hertz (Hz). UV is separated into three sub-bands, according to the US Navy's "Ultraviolet Radiation Guide": </p>
+		<ol type="1" class="home_subtopic20 wf">
+			<li> Ultraviolet A (UVA) </li>
+				<ul type="disc" class="home_subtopic20_2 wf">
+					<li> The majority of UV Light (98.7%) that reaches humans on the earth's surface is of type UVA, which is impacted by ozone fading of paints and dyes. </li>
+					<li> UVA causes premature skin aging. </li>
+					<li> Melanoma is a type of skin cancer caused by UVA. </li>
+				</ul>
+			<li> Ultraviolet B (UVB) </li>
+				<ul type="disc" class="home_subtopic20_2 wf">
+					<li> Only 1.3 percent of UV reaches the earth's surface and is heavily influenced by ozone. </li>
+					<li> Sunburn and tan are caused by these waves. </li>
+					<li> 270-300 nm wavelengths are stimulated for vitamin D synthesis. </li>
+				</ul>
+			<li> Ultraviolet C (UVC) </li>
+				<ul type="disc" class="home_subtopic20_2 wf">
+					<li> UVC waves do not reach the earth's surface because most of them are absorbed by nitrogen, oxygen, and ozone in the atmosphere, and the remainder are scattered. </li>
+					<li> UVC waves damage the skin by causing lesions. </li>
+				</ul>
+		</ol>
+		<div class="home_topic21 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic21 wf"> UVB radiation causes the skin to produce vitamin D. This vitamin is responsible for the vast majority of good health impacts. It regulates calcium metabolism (which is necessary for optimal nervous system function as well as bone development and density maintenance), immunity, cell proliferation, insulin production, and blood pressure. </p>
+		<div class="home_topic22 wf"> Risks to Health and Well-Being from Ultraviolet Light </div>
+		<p class="home_subtopic22 wf"> UUV radiation is dangerous because prolonged exposure causes skin and eye disorders. It also contributes to the skin's aging. Sunburn and several types of skin cancer can be caused by excessive UVB exposure. Prolonged exposure to UV radiation from the sun can harm the skin, eyes, and immune system in humans, causing acute and chronic health problems. UVC can also have harmful consequences that range from mutagenic to carcinogenic. <br> <br> The World Health Organization's International Agency for Research on Cancer has classified all types and wavelengths of UV light as a Group 1 carcinogen. This is the highest degree of carcinogen classification, indicating that "enough evidence exists to establish that it can cause cancer in humans." </p>
+		<div class="home_topic23 wf"> UV Radiation and Ozone Depletion </div>
+		<p class="home_subtopic23 wf"> If all of the Sun's UV light reached the Earth's surface, the severe cell damage it produces would have disastrous consequences for the biosphere. However, the ozone (O3) layer in our high atmosphere (10 to 50 km above the Earth) preserves life by absorbing the majority of the harmful UV rays. <br> <br> Unfortunately, we are currently witnessing a decrease in ozone concentrations in the upper atmosphere. This depletion has resulted in the emergence of a "ozone hole" in the high atmosphere. The hole is more centered in the southern hemisphere and fluctuates with the seasons, being greatest in the spring. This depletion is due to the breakdown of ozone molecules by refrigerant chemicals known as chlorofluorocarbons (CFCs). UV radiation aids in the dissociation of CFCs, producing highly reactive chlorine (Cl) atoms that catalyze the depletion of the ozone layer. <br> <br> As a result, UV radiation poses a significant hazard to both the environment and human health. Ozone depletion is a big issue now because it increases the amount of ultraviolet (UV) radiation reaching the Earth's surface, which causes skin cancer, cataracts, and genetic and immune system damage. </p>
+
+		<div class="parallax7"></div>
+
+		<div class="home_topic24 wf"> X-rays: Key Concepts to Remember </div>
+		<ul type="disc" class="home_subtopic24 wf"> 
+			<li> UX-rays have shorter (higher energy) wavelengths than UV waves and, in general, longer (lower energy) wavelengths than gamma rays. </li>
+			<li> X-rays are classified into two types: hard X-rays with energies greater than 5-10 keV (below 0.2 - 0.1 nm wavelength) and soft X-rays with energies between 100 eV and 5 keV (10 – 0.1 nm wavelength). Because they travel through tissue, hard X-rays are more valuable for radiography. </li>
+			<li> In medical radiography and X-ray spectroscopy, lower levels of X-ray radiation can be employed quite efficiently. The benefits of employing X-rays for examination considerably exceed the risks in the case of medical radiography. </li>
+			<li> Radiation sickness is caused by receiving a high dose of X-rays in a short period of time, whereas lower doses can increase the risk of radiation-induced cancer. </li>
+		</ul>
+		<div class="home_topic25 wf"> An Introduction to X-rays </div>
+		<p class="home_subtopic25 wf"> X-rays are electromagnetic waves with wavelengths ranging from 0.01 to 10 nanometers, frequency ranging from 30 petahertz to 30 exahertz (3 x 1016 Hz to 3 x 1019 Hz), and energy ranging from 100 eV to 100 keV. They have a shorter wavelength than UV rays but a larger wavelength than gamma rays. In several languages, X-rays are referred to as Röntgen radiation, after Wilhelm Röntgen, who is widely regarded as its discoverer and who dubbed it X-rays to represent an undiscovered sort of radiation. The following are the properties of X-Rays: </p>
+		<ul type="disc" class="home_subtopic25 wf"> 
+			<li> They have a shorter electromagnetic spectrum wavelength. </li>
+			<li> To produce X-Rays, a high voltage is required. </li>
+			<li> They're used to capture flaws in the human skeleton. </li>
+			<li> They travel in a straight line without carrying an electric charge. </li>
+			<li> They have the ability to travel in a vacuum. </li>
+		</ul>
+		<div class="home_topic26 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic26 wf"> X-rays are electromagnetic radiation that can see through a person's skin and provide images of the bones beneath it. Advances in technology have resulted in more powerful and focussed X-ray beams, as well as a growing number of applications for these light waves, ranging from viewing teeny biological cells to eliminating cancer cells. </p>
+		<div class="home_topic26 wf"> Risks to Health and Well-Being from X-rays </div>
+		<p class="home_subtopic26 wf"> Ionizing radiation refers to X-rays that have a high energy and can injure biological tissue. Radiation sickness is caused by a large radiation dose given over a short period of time, whereas lesser doses can increase the risk of radiation-induced cancer. </p>
+
+
+		<div class="parallax8"></div>
+
+
+		<div class="home_topic27 wf"> Gamma Rays: Key Concepts to Remember </div>
+		<ul type="disc" class="home_subtopic27 wf"> 
+			<li> Gamma rays have the highest energy, shortest wavelengths, and highest frequency of all the electromagnetic waves. </li>
+			<li> Gamma rays are produced by radioactive atoms, nuclear explosions, and stars. Earth's atmosphere absorbs gamma rays from space. </li>
+			<li> Nuclear medicine employs gamma rays emitted by radioactive materials. </li>
+			<li> Gamma rays have the ability to kill living cells, create mutations, and cause cancer. They can be used to treat cancer by concentrating the lethal rays on the cancer cells. </li>
+		</ul>
+		<div class="home_topic28 wf"> An Introduction to Gamma Rays </div>
+		<p class="home_subtopic28 wf"> The highest energy, shortest wavelengths, and highest frequencies in the electromagnetic spectrum are found in gamma radiation, often known as gamma rays or hyphenated as gamma-rays and denoted as. Gamma rays have wavelengths of fewer than 100 picometers (pm), or 4 x 1019 inches, and frequency more than around 1019 cycles per second, or hertz (Hz). There is no lower limit to gamma energy obtained from radioactive decay because gamma rays from radioactive decay are defined as gamma rays regardless of their energy. The energies produced by gamma decay are typically in the hundreds of keV range, and practically never exceed 10 MeV. <br> <br> According to the Australian Radiation Protection and Nuclear Safety Agency, gamma rays were first identified in 1900 by French chemist Paul Villard while examining radiation from radium (ARPANSA). A few years later, Ernest Rutherford, a New Zealand-born chemist and scientist, proposed the name "gamma rays," based on the sequence of alpha and beta rays, which are names given to other particles produced during nuclear reactions, and the name stuck. <br> <br> Fusion, fission, alpha decay, and gamma decay are the four nuclear reactions that yield gamma rays. </p>
+		<ol type="1" class="home_subtopic28 wf"> 
+			<li> Nuclear Fusion </li>
+			<p class="home_subtopic28_2 wf">It is this reaction that gives life to the sun and the stars. It happens through a multistep process in which four protons, or hydrogen nuclei, are forced to fuse into a helium nucleus, which contains two protons and two neutrons, at severe temperature and pressure. </p>
+			<li> Nuclear Fission </li>
+			<p class="home_subtopic28_2 wf"> Nuclear fission is defined by Lawrence Berkeley National Laboratory as the splitting of a heavy nucleus into two about equal halves, which are the nuclei of lighter elements. Heavy nuclei, such as uranium and plutonium, are broken down into lesser elements, such as xenon and strontium, in this process, which involves collisions with other particles. The particles created by these collisions can then collide with more heavy nuclei, causing a nuclear chain reaction.</p>
+			<li> Alpha Decay </li>
+			<p class="home_subtopic28_2 wf"> When a heavy nucleus emits a helium-4 nucleus, it reduces its atomic number by two and its atomic weight by four. This process can result in an excess of energy in the nucleus, which is expelled as a gamma ray. </p>
+			<li> Gamma Decay </li>
+			<p class="home_subtopic28_2 wf"> When an atom's nucleus has too much energy, it emits a gamma ray without changing its charge or mass composition, which is known as gamma decay. </p>
+		</ol>
+		<div class="home_topic29 wf"> Current Developments and Applications of its Radiation </div>
+		<p class="home_subtopic29 wf"> Many of the same applications as X-rays exist, including cancer therapy. Nuclear medicine makes use of gamma rays emitted by radioactive elements. The fact that gamma radiation may kill any live organism is beneficial to medicine, particularly oncology. Radiation therapy is a method that uses high doses of gamma rays to eliminate malignant cells (lower doses could lead to cells becoming cancerous). Radiation therapy uses a machine called an accelerator or radioactive sources put inside the patient to kill the DNA of malignant cells, halting growth or division. The fundamental goal of a radiation oncologist is to aim the radiation dose as closely as possible to the malignancy in order to minimize adverse effects. Sterilization of medical equipment is also done with gamma rays. Gamma rays easily flow through medical equipment packaging (only thick lead can stop them) and damage live tissue like viruses and bacteria. </p>
+		<div class="home_topic30 wf"> Risks to Health and Well-Being from Gamma Rays </div>
+		<p class="home_subtopic30 wf"> Ionizing radiation, such as gamma rays, is biologically harmful. Gamma rays have such a high energy that they may pierce almost any material. They're even capable of passing through bones and teeth. Gamma rays are extremely harmful as a result of this. They have the ability to kill living cells, cause gene mutations, and cancer. The fatal effects of gamma rays, ironically, can be employed to treat cancer. A medical gadget emits concentrated gamma rays that target malignant cells in this sort of treatment. Gamma rays damage cells and eliminate cancer cells. </p>
+
+
+		<div class="parallax9"></div>
+
+
+
+		<div class="home_topic31 wf"> The Effects of Electromagnetic Radiation to Climate Change </div>
+		<p class="home_subtopic31 wf" id="9"> According to scientists, human activities are altering the Earth's atmosphere and raising the average temperature. What is the source of these climate changes? <br> <br> Let's start with the "normal" temperature of the Earth: Earth heats up when it absorbs sunlight, which is predominantly visible light. Earth emits energy, just like the sun, however it emits lower-energy infrared wavelengths due to its cooler temperature. Greenhouse gases (methane, carbon dioxide, etc.) in the atmosphere allow visible light to pass through while absorbing infrared light, causing the atmosphere to heat up. More infrared radiation is emitted by a warmer atmosphere, which is reabsorbed – possibly multiple times – before returning to space. The extra time this energy spends on Earth has contributed to keeping the planet warm enough to support life as we know it. (The moon, on the other hand, lacks an atmosphere and is, on average, cooler than Earth.) <br> <br> Carbon dioxide levels in the atmosphere have increased by 40% and methane levels have climbed by 150 percent since the industrial revolution began around 1750. As a result of these increases, more infrared radiation is absorbed, raising Earth's temperature above its normal range (even as energy from the sun stays basically the same). In other words, energy that reaches Earth has a harder time leaving it, resulting in an increase in the Earth's average temperature and global climate change. <br> <br> [In molecular detail, greenhouse gases absorb infrared light because their molecules can vibrate to produce asymmetric electric charge distributions that correspond to the energy levels of different infrared wavelengths. Non-greenhouse gases (such as oxygen and nitrogen – O2 and N2), on the other hand, do not absorb infrared light since their charge distributions are symmetric even when vibrating.] <br> <br> Summary: (a) Earth absorbs the majority of the sunlight it receives; (b) Earth then emits the absorbed light's energy as infrared light; (c) greenhouse gases absorb a large portion of the infrared light before it can leave our atmosphere; (d) being absorbed slows the rate at which energy escapes to space; and (e) the slower passage of energy heats the atmosphere, water, and ground. Humans are increasing the absorption of infrared radiation in the atmosphere by raising greenhouse gas levels, thus warming the Earth and changing global climate patterns. </p>
+
+
+		<div class="parallax10"></div>
+
+
+		<div class="home_topic32 wf"> Particulate Radiation Terminology Guide </div>
+		<ul type="disc" class="home_subtopic32 wf">
+			<li> Particulate radiation is a type of radiation that consists of small, fast-moving particles that have both energy and mass. </li>
+			<li> Particulate radiation, which includes Alpha and Beta particles, is primarily caused by the breakup of an unstable atom. </li>
+			<li> Alpha Particles (α): made up of two protons and two neutrons. These are enormous, slow-moving, positively charged particles. The nucleus of a helium atom is the same size as an alpha particle. </li>
+			<li> Beta Particles (β): particles that are tiny and move quickly. They can have a positive charge (positrons) or a negative charge (electrons). </li>
+			<li> Neutrons: subatomic particles that make up an atom's nucleus. They are not charged, unlike protons and electrons. </li>
+		</ul>
+		<div class="home_topic33 wf"> An Overview of Particulate Radiation </div>
+		<p class="home_subtopic33 wf"> Particulate radiation is a type of radiation that consists of small, fast-moving particles with both energy and mass. Particulate radiation, which includes Alpha and Beta particles, is largely produced by the breakup of an unstable atom. <br> <br> Particle radiation, in other terms, is made up of atomic or subatomic particles. Protons, neutrons, and electrons are examples of these particles. All of them have kinetic energy. When a thing is moving, it has this amount of energy. Ionizing radiation is produced by both alpha and beta particles. They can remove electrons from atoms because of the charge they carry. They can also use coulombic forces to interact directly with an atom's electrons. </p>
+		<div class="home_topic34 wf"> Interactions of Particulate Radiation With Matter </div>
+		<ol type="1" class="home_subtopic34 wf">
+			<li> Alpha Particles  (α) </li>
+			<p class="home_subtopic34_2 wf"> The alpha particle, which is made up of two protons and two neutrons, is extremely large, has a lot of kinetic energy, and has a charge of +2. It leaves a dense trace of ionizations induced by coulombic interactions due to its low velocity. Only a few millimetres of tissue can be penetrated by an alpha particle, which can penetrate 3 cm of air. </p>
+			<li> Beta Particles  (β) </li>
+			<p class="home_subtopic34_2 wf"> The beta particle is a one-charged high-speed electron expelled from a nucleus. The beta particles of a specific isotope have a continuous energy spectrum that is characterized exclusively by the isotope's highest energy. Beta particles can penetrate tissue from a few millimeters to a few centimeters depending on their maximal energy. They also leave a somewhat dense trail of coulombic interactions-induced ionizations. When absorbed by a target, beta particles, like the electronic devices described above, emit x-rays. </p>
+			<li> Neutron Radiation </li>
+			<p class="home_subtopic34_2 wf"> Indirectly ionizing radiation includes neutron radiation. Free neutrons that have been liberated from atoms make up this substance. Isotopes are formed when free neutrons react with the nuclei of other atoms. Radiation, such as gamma rays, can then be emitted by these isotopes. Indirect ionizing radiation refers to neutron radiation. This is due to the fact that it does not ionize atoms in the same manner as charged particles do. <br> <br> Neutrons can have energies ranging from tens of MeV to 0.015 eV, depending on their source. Because they are uncharged, they interact with absorber nuclei mostly by physical collision. The collisions are dubbed elastic because they are characterized by momentum and kinetic energy conservation. </p>
+		</ol>
+		<div class="home_topic35 wf"> Current Developments and Applications of Particulate Radiation </div>
+		<p class="home_subtopic33 wf"> Here are some common applications and uses of the Alpha Radiation </p>
+		<ul type="disc" class="home_subtopic35 wf">
+			<li> Cancer Treatment </li>
+			<p class="home_subtopic35_2 wf"> Alpha radiation is a type of radiation that is used to treat a variety of cancers. This method, known as unsealed source radiation, involves injecting small doses of Radium-226 into tumors. The alpha particles kill cancer cells, but they don't penetrate far enough to harm healthy cells. Safer, more effective radiation sources, such as cobalt-60, have mostly supplanted radium-226. Radium-223 is still used to treat bone cancer under the brand name Xofigo. </p>
+			<li> Smoke Detector </li>
+			<p class="home_subtopic35_2 wf"> Some smoke detectors employ alpha radiation. Americium-241's alpha particles assault air molecules, knocking electrons loose. After that, the electrons are employed to generate an electrical current. This current is disrupted by smoke particles, which sets off an alert. </p>
+		</ul>
+		<div class="home_topic36 wf"> Current Developments and Applications of Particulate Radiation </div>
+		<p class="home_subtopic36 wf"> Here are some common applications and uses of the Alpha Radiation </p>
+		<ul type="disc" class="home_subtopic36 wf">
+			<li> Alpha particles  (α) </li>
+			<p class="home_subtopic36_2 wf"> The health effects of alpha particle exposure are highly dependent on how a person is exposed. Because alpha particles lack the energy to penetrate even the outer layer of skin, they pose no danger to the outside of the body. They can, however, be extremely destructive inside the body. When alpha-emitters are inhaled, eaten, or enter the body through a cut, they can harm delicate live tissue. These huge, heavy particles are more hazardous than other types of radiation because of the manner they inflict damage. They can release all of their energy in a few cells because of the close proximity of the ionizations they create. Cells and DNA are more severely damaged as a result of this. </p>
+			<li> Beta Particles  (β) </li>
+			<p class="home_subtopic36_2 wf"> Some beta particles have the ability to penetrate the skin and cause skin burns. However, beta-emitters, like alpha-emitters, are most dangerous when breathed or eaten. </p>
+		</ul>
+
+
+		<div class="parallax11"></div>
+
+
+		<div class="home_topic37 wf"> Electromagnetic Radiation VS Particulate Radiation </div>
+		<p class="home_subtopic37 wf"> The term "radiation" refers to a type of energy. Electromagnetic and Particulate Radiation are the two fundamental forms of radiation. </p>
+		<ul type="disc" class="home_subtopic37 wf">
+			<li> Electromagnetic Radiation </li>
+			<p class="home_subtopic37_2 wf"> Electromagnetic Radiation (EMR) is made up of waves. Electric and magnetic energy may be found in the waves. EMR comes in seven different forms in nature. Gamma rays are the most energetic and have the shortest wavelength. X-rays, ultraviolet light, visible light, infrared radiation, and microwave radiation are next. Finally, radio waves have the shortest wavelength and lowest energy. Only two portions of the EMS are perceptible. Infrared radiation may be felt, and visible light can be seen. X-rays, radio waves, and gamma rays may all pass through your body. However, you cannot see or feel them. Electromagnetic radiation is made up of little energy packets called quanta. Photons are used to call these energy bundles that have no charge. In a vacuum, they move at the speed of light (2.998 108 m/s). Electromagnetic radiation travels in little packets (quanta) of energy. These charge-less bundles of energy are called photons. They travel at the speed of light (2.998 × 108 m/s) in a vacuum. <br> <br> To learn more about Electromagnetic Radiation, <a href="#"> <i> click here. </i> </a> </p>
+			<li> Particulate Radiation </li>
+			<p class="home_subtopic37_2 wf"> Particulate radiation is a kind of radiation that consists of small, fast-moving particles with both energy and mass. Particulate radiation, which includes Alpha and Beta particles, is largely created by the breakup of an unstable atom. <br> <br> To learn more about  Particulate Radiation, <a href="#"> <i> click here. </i> </a> </p>
+
+		</ul>
+
+		<div class="home_topics bg bg1 wf" id="last">
+			<div class="home_topic"> Stay Connected </div>
+			<img src="earth.png" width="100px" height="100px" style="margin-left:610px; margin-right:500px; margin-top:20px">
+			<img src="facebook.png" width="50px" height="50px" style="margin-left:550px; margin-top:0px">
+			<img src="instagram.png" width="50px" height="50px" style="margin-left:5px">
+			<img src="twitter.png" width="50px" height="50px" style="margin-left:5px">
+			<img src="google.png" width="50px" height="50px" style="margin-left:5px">
+
+	<hr color="white" style="width:430px; position:relative; top:10px; left:30px; clear:left;">	
+
+			<span class="navlinks2">
+			<a href="about us.html"> US </a>
+			<a href="Group Integrative Assessment.html"> INFO </a>
+			<a href="#last"> FEEDBACK </a>
+			<a href="Group Integrative Assessment.html"> ARTICLES </a>
+			<a href="References for Climate Change.html"> REFERENCES </a>
+			<a href="#last"> HELP </a>
+			</span>
+
+
+			<div class="home_subtopic"> This website was created by the Powell Team 1 of City of Mandaluyong Science High School 
+			<br> </div>
+
+			<div class="home_subtopic">
+			Site Developer: Maien Pangilinan <br>
+			Web Designer: Wyndle Wyne Calansingin <br>
+			Program Manager: Joanna Mari Maravilla <br>
+			Subjects Heads: <br>
+			Vince Nathan Alfonso <br>
+			Kirstine Zianne Alfaro <br>
+			Princess Danielle Mendoza <br>
+			Juan Mendiola <br>
+			Kimberly Torcino <br>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Standard Deviation of Climate Change </title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial scale=1">
+		<script src="https://kit.fontawesome.com/83105370b1.js" crossorigin="anonymous"> </script>
+		<link href="https://fonts.googleapis.com/css?family=Be Vietnam Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Be Vietnam" rel="stylesheet">
+
+	<style>
+		html {scroll-behavior: smooth;}
+
+			/* Home page opening */
+			.navlinks {font-size:20px; font-family:"be vietnam pro"; position:fixed; z-index: 3; background:white; padding-top:10px; padding-bottom:10px;
+			width:100%; overflow:hidden; text-shadow: 1px 2px #999999; box-shadow:0px 2px 3px grey; top:0}
+			.nlspacing1 {letter-spacing:4px; word-spacing:5px; padding-right:10px; padding-left:20px;}
+			.nlspacing2 {letter-spacing:2px; word-spacing:8px;  padding-right:10px; padding-left:5px; float:right}
+			.navlink {color:#000; text-decoration:none} .navlink:visited {color:#000} .navlink:hover {color:#d6dbdb} .navlink:active {color:#b5bdbf}
+			.navlinks2 {word-spacing:15px; font-size:20px; position:relative; left:380px; top:25px; font-family:"be vietnam pro"; z-index:2;}
+
+
+			/* Home backgrounds */
+				.home_bg {background-position:center; background-repeat:no-repeat; background-size:cover}
+				.bg {background:black; max-width:100%}
+				.bg1 {background-image: url("last.jpeg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; 
+				background-size: cover; position:absolute; top:3850px; height:680px;} 
+				.bg2 {background:white; max-width:100%; position:absolute; top:1550px; height:300px; z-index:1;}
+
+
+			/* Home topics */
+				.home_topics {max-width:100%; font-family:"Helvetica"; z-index: 2}
+				.home_subtopic1 {font-size:20px; position:relative; text-align:justify; margin: -380px 200px 40px 200px; line-height: 1.5}
+				.home_topic {font-size:30px; position:relative; margin-top:30px; margin-left:550px; font-family:"be vietnam"}
+				.home_subtopic {font-size:20px; position:relative; text-align:justify; margin-top: 40px; text-align:center; line-height:1.5; 
+				font-family:"be vietnam";}
+				.home_subtopic2 {font-size:20px; position:relative; text-align:justify; margin: -30px 200px 0px 250px; line-height: 1.5; float:left}
+				.home_subtopic3 {font-size:20px; position:relative; text-align:justify; margin: 50px 80px 40px 80px; line-height: 1.5; float:left}
+				.home_topic4 {font-size:30px; position:relative; margin-top: 1070px; margin-left:80px;}
+				.home_subtopic4 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 0px 50px; line-height: 1.5; float:left}
+				.home_topic5 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px;}
+				.home_subtopic5 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 0px 50px; line-height: 1.5; float:left}
+				.home_subtopic6 {font-size:20px; position:relative; text-align:justify; margin: 60px 80px 0px 50px; line-height: 1.5; float:left}
+
+			/* Home parallax */
+			.parallax {background-image: url("solutions.png"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; 
+			background-size: cover; position:relative; top:0px; height:400px; -ms-transform: skewY(-4deg); transform: skewY(-4deg); opacity: 0.8}
+			.parallax1 {background: white; max-width:100%; position:absolute; background-attachment: fixed; background-position: center; 
+			background-repeat: no-repeat; background-size: cover; position:relative; top:0px; height:500px; -ms-transform: skewY(-4deg); 
+			transform: skewY(-4deg)}
+			.parallax2 {background-image: url("solutions 2.jpeg"); background-attachment: fixed; background-position: center; left-margin:-100
+			background-repeat: no-repeat; background-size: cover; position:relative; top:388px; height:800px; -ms-transform: skewY(-4deg); 
+			transform: skewY(-4deg); left:0px; width:1280px}
+
+			/* SR table */
+			.tg  {border-collapse:collapse; border-spacing:0; margin-top:80px; width:90%; margin-left:auto; margin-right:auto;}
+			.tg td {border-color:black; border-style:solid; border-width:1px; font-size:14px; overflow:hidden; padding:10px 5px; 
+			word-break:normal;}
+			.tg th{border-color:black; border-style:solid; border-width:1px;font-size:14px; fontweight:normal; overflow:hidden; padding:10px 5px; 
+			word-break:normal;}
+			.tg .tgconts {text-align:center; vertical-align:top}
+			.tg .tghead {font-weight:bold; text-align:center; vertical-align:top}
+
+			/* Images */
+			.image {float: left; padding: 5px; margin-top:5px; margin-left:280px}
+
+		body {background:white; font-family:"helvetica"; max-width:100%; margin:0}
+		.bf {color:#000}
+		.wf {color:#fff}
+		a:link {color:#fff; text-decoration:none} a:visited {color:#fff} a:hover {color:#d6dbdb} a:active {color:#b5bdbf}
+	</style>
+	<body>
+		<!-- Right navbar links -->
+			<span class="navlinks" id="home">
+				<a class="navlink nlspacing1" href="Group Integrative Assessment.html"> <i class="fas fa-globe-americas"> </i> SAVE EARTH </a>
+				<a class="navlink nlspacing2" href="Trigonometry for Climate Change.html"> TRIGONOMETRY </a>
+				<a class="navlink nlspacing2" href="Solutions for Climate Change.html"> SOLUTIONS </a>
+				<a class="navlink nlspacing2" href="Effects of Climate Change.html"> EFFECTS </a>
+				<a class="navlink nlspacing2" href="Science of Climate Change.html"> SCIENCE </a>
+				<a class="navlink nlspacing2" href="Causes of Climate Change.html"> CAUSES </a>
+				<a class="navlink nlspacing2" href="Evidences of Climate Change.html"> EVIDENCES </a>
+				<a class="navlink nlspacing2" href="Group Integrative Assessment.html"> HOME </a>
+			</span>
+		
+		<!-- SR table 1 -->	
+			<table class="tg">
+				<thead>
+					<tr>
+						<th class="tghead"> Decade </th>
+						<th class="tghead"> Global Annual Temperature Average per <br> Decade in Degree Celsius (C°) </th>
+						<th class="tghead"> Global Annual Temperature Average per <br> Decade in Degree Fahrenheit (F°) </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tgconts"> 1880 </td>
+						<td class="tgconts"> 13.73 </td>
+						<td class="tgconts"> 56.71 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1890 </td>
+						<td class="tgconts"> 13.75 </td>
+						<td class="tgconts"> 56.74 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1900 </td>
+						<td class="tgconts"> 13.74 </td>
+						<td class="tgconts"> 56.73 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1910 </td>
+						<td class="tgconts"> 13.72 </td>
+						<td class="tgconts"> 56.70 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1920 </td>
+ 						<td class="tgconts"> 13.83 </td>
+						<td class="tgconts"> 56.89 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1930 </td>
+						<td class="tgconts"> 13.96 </td>
+						<td class="tgconts"> 57.12 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1940 </td>
+						<td class="tgconts"> 14.04 </td>
+						<td class="tgconts"> 57.26 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1950 </td>
+						<td class="tgconts"> 13.98 </td>
+						<td class="tgconts"> 57.16 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1960 </td>
+						<td class="tgconts"> 13.99 </td>
+						<td class="tgconts"> 57.18 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1970 </td>
+						<td class="tgconts"> 14.00 </td>
+						<td class="tgconts"> 57.20 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1980 </td>
+						<td class="tgconts"> 14.18 </td>
+						<td class="tgconts"> 57.52 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 1990 /td>
+						<td class="tgconts"> 14.31 </td>
+						<td class="tgconts"> 57.76 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 2000 </td>
+						<td class="tgconts"> 14.51 </td>
+						<td class="tgconts"> 58.12 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 2010 </td>
+						<td class="tgconts"> 14.70 </td>
+						<td class="tgconts"> 58.46 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> 2020 </td>
+						<td class="tgconts"> 14.88 </td>
+						<td class="tgconts"> 58.78 </td>
+					</tr>
+				</tbody>
+			</table>
+
+		<!-- SR table 2 -->
+		<div class="image"> <img src="sd 1.png" height="275px" width="750px"> </div>
+		<div class="image"> <img src="sd 2.png" height="300px" width="750px"> </div>
+			<table class="tg">
+				<thead>
+					<tr>
+						<th class="tghead" style="background:black"> </th>
+						<th class="tghead"> (x - μ)² </th>
+						<th class="tghead"> (x - μ)²  </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tgconts"> (13.73-14.09)² </td>
+						<td class="tgconts"> -0.36² </td>
+						<td class="tgconts"> 0.1296 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (13.75-14.09)² </td>
+						<td class="tgconts"> -0.34² </td>
+						<td class="tgconts"> 0.1156 </td></tr>
+					<tr>
+						<td class="tgconts"> (13.74-14.09)² </td>
+						<td class="tgconts"> -0.35² </td>
+						<td class="tgconts"> 0.1225 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (13.72-14.09)² </td>
+						<td class="tgconts"> -0.37² </td>
+						<td class="tgconts"> 0.1369 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (13.83-14.09)² </td>
+ 						<td class="tgconts"> -0.26² </td>
+						<td class="tgconts"> 0.0676 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (13.96-14.09)² </td>
+						<td class="tgconts"> -0.13² </td>
+						<td class="tgconts"> 0.0169 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.04-14.09)² </td>
+						<td class="tgconts"> -0.05² </td>
+						<td class="tgconts"> 0.0025 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (13.98-14.09)² </td>
+						<td class="tgconts"> -0.11² </td>
+						<td class="tgconts"> 0.0121 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (13.99-14.09)² </td>
+						<td class="tgconts"> -0.10² </td>
+						<td class="tgconts"> 0.01 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.00-14.09)² </td>
+						<td class="tgconts"> -0.09² </td>
+						<td class="tgconts"> 0.0081 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.18-14.09)²</td>
+						<td class="tgconts"> 0.09² </td>
+						<td class="tgconts"> 0.0081 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.31-14.09)² </td>
+						<td class="tgconts"> 0.22² </td>
+						<td class="tgconts"> 0.0484 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.51-14.09)² </td>
+						<td class="tgconts"> 0.42² </td>
+						<td class="tgconts"> 0.1764 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.70-14.09)² </td>
+						<td class="tgconts"> 0.61² </td>
+						<td class="tgconts"> 0.3721 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (14.88-14.09)² </td>
+						<td class="tgconts"> 0.79² </td>
+						<td class="tgconts"> 0.6241 </td>
+					</tr>
+					<tr>
+						<td class="tgconts" style="background:black"></td>
+						<td class="tgconts" style="background:black"></td>
+						<td class="tgconts"> 1.8509 </td>
+					</tr>
+				</tbody>
+			</table>
+
+		<div class="image"> <img src="sd 3.png" height="300px" width="750px"> </div>
+		<div class="image"> <img src="sd 4.png" height="300px" width="750px"> </div>
+
+
+		<!-- SR table 3 -->
+		<div class="image"> <img src="sd 5.png" height="275px" width="750px"> </div>
+
+			<table class="tg">
+				<thead>
+					<tr>
+						<th class="tghead" style="background:black"> </th>
+						<th class="tghead"> (x - μ)² </th>
+						<th class="tghead"> (x - μ)²  </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="tgconts"> (56.71-57.36)² </td>
+						<td class="tgconts"> -0.65² </td>
+						<td class="tgconts"> 0.4225 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (56.74-57.36)² </td>
+						<td class="tgconts"> -0.62² </td>
+						<td class="tgconts"> 0.3844 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (56.73-57.36)² </td>
+						<td class="tgconts"> -0.63² </td>
+						<td class="tgconts"> 0.3969 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (56.70-57.36)² </td>
+						<td class="tgconts"> -0.66² </td>
+						<td class="tgconts"> 0.4356 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (56.89-57.36)² </td>
+						<td class="tgconts"> -0.47² </td>
+						<td class="tgconts"> 0.2209 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.12-57.36)² </td>
+						<td class="tgconts"> -0.24² </td>
+						<td class="tgconts"> 0.0576 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.26-57.36)² </td>
+						<td class="tgconts"> -0.10² </td>
+						<td class="tgconts"> 0.01 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.16-57.36)² </td>
+						<td class="tgconts"> -0.20² </td>
+						<td class="tgconts"> 0.04 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.18-57.36)² </td>
+						<td class="tgconts"> -0.18² </td>
+						<td class="tgconts"> 0.0324 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.20-57.36)² </td>
+						<td class="tgconts"> 0.16² </td>
+						<td class="tgconts"> 0.0256 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.52-57.36)² </td>
+						<td class="tgconts"> 0.16² </td>
+						<td class="tgconts"> 0.0256 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (57.76-57.36)² </td>
+						<td class="tgconts"> 0.40² </td>
+						<td class="tgconts"> 0.16 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (58.12-57.36)² </td>
+						<td class="tgconts"> 0.76² </td>
+						<td class="tgconts"> 0.5776 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (58.46-57.36)² </td>
+						<td class="tgconts"> 1.10² </td>
+						<td class="tgconts"> 1.21 </td>
+					</tr>
+					<tr>
+						<td class="tgconts"> (58.78-57.36)² </td>
+						<td class="tgconts"> 1.42² </td>
+						<td class="tgconts"> 2.0164 </td>
+					</tr>
+					<tr>
+						<td class="tgconts" style="background:black"> </td>
+						<td class="tgconts" style="background:black"> </td>
+						<td class="tgconts"> 6.0155 </td>
+					</tr>
+				</tbody>
+			</table>
+
+		<div class="image"> <img src="sd 6.png" height="300px" width="750px"> </div>
+
+		<div class="home_topics bg bg1 wf" id="last">
+			<div class="home_topic"> Stay Connected </div>
+			<img src="earth.png" width="100px" height="100px" style="margin-left:610px; margin-right:500px; margin-top:20px">
+			<img src="facebook.png" width="50px" height="50px" style="margin-left:550px; margin-top:0px">
+			<img src="instagram.png" width="50px" height="50px" style="margin-left:5px">
+			<img src="twitter.png" width="50px" height="50px" style="margin-left:5px">
+			<img src="google.png" width="50px" height="50px" style="margin-left:5px">
+
+	<hr color="white" style="width:430px; position:relative; top:10px; left:30px; clear:left;">	
+
+			<span class="navlinks2">
+			<a href="about us.html"> US </a>
+			<a href="Group Integrative Assessment.html"> INFO </a>
+			<a href="#last"> FEEDBACK </a>
+			<a href="Group Integrative Assessment.html"> ARTICLES </a>
+			<a href="References for Climate Change.html"> REFERENCES </a>
+			<a href="#last"> HELP </a>
+			</span>
+
+
+			<div class="home_subtopic"> This website was created by the Powell Team 1 of City of Mandaluyong Science High School 
+			<br> </div>
+
+			<div class="home_subtopic">
+			Site Developer: Maien Pangilinan <br>
+			Web Designer: Wyndle Wyne Calansingin <br>
+			Program Manager: Joanna Mari Maravilla <br>
+			Subjects Heads: <br>
+			Vince Nathan Alfonso <br>
+			Kirstine Zianne Alfaro <br>
+			Princess Danielle Mendoza <br>
+			Juan Mendiola <br>
+			Kimberly Torcino <br>
+			</div>
+		</div>
+	</body>
+</html>

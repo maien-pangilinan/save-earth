@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Group 1 - Integrative Assessment </title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial scale=1">
+		<script src="https://kit.fontawesome.com/83105370b1.js" crossorigin="anonymous"> </script>
+		<link href="https://fonts.googleapis.com/css?family=Be Vietnam Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Be Vietnam" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Alata" rel="stylesheet">
+	<style>
+		html {scroll-behavior: smooth;}
+
+		/* Home gallery */
+			* {box-sizing: border-box}
+			.home_gallery {display: none}
+	
+			/* Slideshow container */
+			.slideshow-container {width: 100%; height:550px; position: absolute; top:0px; z-index: 1; vertical-align:middle}
+
+			/* Slideshow caption */
+			.text {color: #e8bd3f; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 50px; width: 100%; text-align: center; 
+			font-family:"be vietnam"}
+
+			/* Fading animation */
+			.fade {-webkit-animation-name: fade; -webkit-animation-duration: 1.5s; animation-name: fade; animation-duration: 1.5s}
+			@-webkit-keyframes fade {from {opacity: .4} to {opacity: 1}}
+			@keyframes fade {from {opacity: .4} to {opacity: 1}}
+
+			/* On smaller screens, decrease text size */
+			@media only screen and (max-width: 300px) {.prev, .next,.text {font-size: 11px}}
+
+		/* Home page opening */
+			.webname {font-size:30px; position:absolute; left:40px; top:15px; font-family:"be vietnam pro"; z-index: 2}
+			.navlinks {word-spacing:10px; font-size:20px; position:relative; left:90px; top:15px; font-family:"be vietnam pro"; z-index:2}
+			.midlinks {word-spacing: 20px; font-size:23px; font-family:"be vietnam pro"; padding:20px; position:absolute;
+			left:190px; top:485px; bottom:0px; z-index: 2;}
+			input[type=text] {padding-top: 4px; border: none; margin-right: 10px; font-size: 16px; width:150px; top:8px}
+			.navlinks2 {word-spacing:15px; font-size:20px; position:relative; left:380px; top:25px; font-family:"be vietnam pro"; z-index:2;}
+
+
+		/* About curtain menu */
+			.overlay {height: 0%; width: 100%; position: fixed; z-index: 3; left: 0; top: 0; background-color: rgba(0,0,0, 0.7); overflow-x: hidden; 
+			transition: 0.5s; font-family:"be vietnam pro"}
+			.overlay-content {position: relative; top: 25%; width: 100%; text-align: center; margin-top: 30px;}
+			.overlay a {padding: 8px; text-decoration: none; font-size: 36px; color: #818181; display: block; transition: 0.3s;}
+			.overlay a:hover, .overlay a:focus {color: #a7a8a8;}
+			.overlay .closebtn {position: absolute; top: 20px; right: 45px; font-size: 60px;}
+
+			/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again */
+			@media screen and (max-height: 450px) {.overlay a {font-size: 20px} .overlay .closebtn {font-size: 40px; top: 15px; right: 35px;}}
+
+		/* Home page */
+
+			/* Home articles */
+			.ha1 {font-family:"Helvetica"; font-weight:800; font-size:19px; position:relative; top:575px; float:left; letter-spacing: 2px}
+			.has1 {font-family:"Helvetica"; font-weight:normal; font-size:13px; position:relative; clear:both; letter-spacing: 1px}
+			.hass1 {font-family:"Helvetica"; font-weight:normal; font-size:13px; position:relative; clear:both; opacity:0.9; letter-spacing: 0px}
+			.ha2 {font-family:"Helvetica"; font-weight:800; font-size:19px; position:relative; left:10px; top:550px; float:left; letter-spacing: 2px}
+
+			/* Home backgrounds */
+			.home_bg {background-position:center; background-repeat:no-repeat; background-size:cover;}
+			.bg {background:black; max-width:100%}
+			.bg2 {background:white; max-width:100%; position:absolute; top:750px; height:350px; z-index:1}
+			.bg3 {background:white; max-width:100%; position:absolute; top:1800px; height:460px; z-index:1}
+			.bg4 {background:white; max-width:100%; position:absolute; top:2700px; height:400px; z-index:1}
+			.bg5 {background:#d07d7d; max-width:100%; position:absolute; top:3500px; height:350px; z-index:1}
+			.bg6 {background-image: url("last.jpeg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; 
+			background-size: cover; position:absolute; top:4220px; height:680px;} 
+
+
+			/* Home topics */
+			.home_topics {max-width:100%; font-family:"Helvetica"; z-index: 2}
+			.home_topic1 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px}
+			.home_subtopic1 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+
+			.home_topic2 {font-size:30px; position:relative; margin-top:460px; margin-left:80px;}
+			.home_subtopic2 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+
+			.home_topic3 {font-size:30px; position:relative; margin-top: 50px; margin-left:80px;}
+			.home_subtopic3 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+
+			.home_topic4 {font-size:30px; position:relative; margin-top:900px; margin-left:80px; padding-top:80px}
+			.home_subtopic4 {font-size:20px; position:relative; text-align:justify; margin: 30px 600px 40px 80px; line-height: 1.5}
+
+			.home_topic5 {font-size:30px; position:relative; margin-top:50px; margin-left:80px}
+			.home_subtopic5 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 40px 80px; line-height: 1.5}
+
+			.home_topic6 {font-size:30px; position:relative; margin-top:410px; margin-left:70px;}
+			.home_subtopic6 {font-size:20px; position:relative; text-align:justify; margin: 20px 40px 0px 70px; line-height: 1.5}
+
+			.home_topic7 {font-size:30px; position:relative; margin-top:410px; margin-left:0px;}
+			.home_subtopic7 {font-size:20px; position:relative; text-align:justify; margin: 15px 70px 0px 0px; line-height: 1.5}
+
+			.home_topic8 {font-size:30px; position:relative; margin-top:50px; margin-left:80px}
+			.home_subtopic8 {font-size:20px; position:relative; text-align:justify; margin: 30px 80px 20px 80px; line-height: 1.5}
+
+			.home_topic9 {font-size:30px; position:relative; margin-top:860px; margin-left:70px;}
+			.home_subtopic9 {font-size:20px; position:relative; text-align:justify; margin: 20px 40px 0px 70px; line-height: 1.5}
+
+			.home_topic10 {font-size:30px; position:relative; margin-top:860px; margin-left:0px;}
+			.home_subtopic10 {font-size:20px; position:relative; text-align:justify; margin: 18px 70px 0px 0px; line-height: 1.5}
+
+			.home_topic11 {font-size:30px; position:relative; margin-top:30px; margin-left:550px; font-family:"be vietnam"}
+			.home_subtopic11 {font-size:20px; position:relative; text-align:justify; margin-top: 40px; text-align:center; line-height:1.5; font-family:"be vietnam";}
+
+			.column {float: left; width: 50%; padding: 10px; height: 300px;}
+			.row:after {content: ""; display: table; clear: both;}
+
+			/* Home parallax */
+			.parallax {background-image: url("ozone depletion.gif"); background-attachment: fixed; background-position:
+			center; background-repeat: no-repeat; background-size: cover; position:relative; top:0px; height:500px;}
+
+			/* See more buttons */
+			.btn_evidences {background-color: white; border: none; color: black; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_evidences:hover {background-color: #d6dbdb;}
+
+			.btn_causes {background-color: black; border: none; color: white; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:60px}
+			.btn_causes:hover {background-color: #d6dbdb;}
+
+			.btn_science {background-color: white; border: none; color: black; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_science:hover {background-color: #d6dbdb;}
+
+			.btn_effects {background-color: black; border: none; color: white; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:60px}
+			.btn_effects:hover {background-color: #d6dbdb;}
+
+			.btn_solutions {background-color: white; border: none; color: black; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_solutions:hover {background-color: #d6dbdb;}
+
+			.btn_trigonometry {background-color: white; border: none; color: black; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_trigonometry:hover {background-color: #d6dbdb;}
+
+			.btn_french {background-color: #073763; border: none; color: white; padding: 10px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_french:hover {background-color: #d6dbdb;}
+
+			.btn_opinions {background-color: white; border: none; color: black; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_opinions:hover {background-color: #d6dbdb;}
+
+			.btn_communication {background-color: white; border: none; color: black; padding: 12px 10px; font-size: 18px; cursor: pointer;
+			font-family:"helvetica"; letter-spacing: 2px; font-weight: bold; float:left; margin-top:70px}
+			.btn_communication:hover {background-color: #d6dbdb;}
+
+
+			body {background:black; font-family:"helvetica"; max-width:100%; margin:0}
+			.bf {color:#000}
+			.wf {color:#fff}
+			.blf {color:#073763}
+			a:link {color:#fff; text-decoration:none} a:visited {color:#fff} a:hover {color:#d6dbdb} a:active {color:#b5bdbf}
+
+	</style>
+	</head>
+	<body>
+		<!-- Curtain menu for about -->
+		<div class="overlay" id="about">
+			<!-- Close button -->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<!-- Overlay content -->
+			<div class="overlay-content" style="opacity:1.0">
+				<a href="about us.html"> ABOUT US </a>
+				<a href="#last"> FEEDBACK </a>
+				<a href="#last"> CONTACT </a>
+				<a href="#last"> HELP </a>
+			</div>
+		</div>
+
+		<!-- Navbar (sit on top) -->
+			<span class="webname"> <a href="#home"> <i class="fas fa-globe-americas"> </i> SAVE EARTH </a> </span>
+ 
+		<!-- Right navbar links -->
+			<span class="navlinks" id="home">
+				<a href="#info"> INFO </a>
+				<a href="#articles"> <i class=""> </i> ARTICLES </a>
+				<a href="References for Climate Change.html"> <i class=""> </i> REFERENCES </a>
+				<a href="#about" onclick="openNav()"> <i class=""> </i> MORE </a>
+				<a href="#search"> <i class="fas fa-search"></i> </a>
+				<input type="text" placeholder="Search.." id="search">
+			</span>
+
+		<!-- Home page opening gallery -->
+		<div class="slideshow-container">
+			<div class="home_gallery fade">
+				<img src="earth climate spinning.gif" style="width:100%; height: 550px">
+				<div class="text"> <i> SEE NOW: CLIMATE CHANGE CONTINUES TO PERSIST DESPITE HUMAN EFFORTS </i> </div>
+			</div>
+			<div class="home_gallery fade">
+				<img src="climate change over the years.gif" style="width:100%; height: 550px">
+				<div class="text"> <i> BREAKING NEWS: EVIDENCE SHOWS CLIMATE CHANGE WORSENS </i> </div>
+			</div>
+			<div class="home_gallery fade">
+				<img src="ice on earth spinning.gif" style="width:100%; height: 550px">
+				<div class="text"> <i> NEW: RAPID GLOBAL WARMING DUE TO CLIMATE CHANGE AFFECTS BIODIVERSITY </i> </div>
+			</div>
+		</div>
+
+		<!-- Middle links -->
+			<span class="midlinks navcharlinks" id="articles">
+				<a href="#evidences"> <i class=""> </i> EVIDENCES </a>
+				<a href="#causes"> <i class=""> </i> CAUSES </a>
+				<a href="#science"> <i class=""> </i> SCIENCE </a>
+				<a href="#effects"> <i class=""> </i> EFFECTS </a>
+				<a href="#solutions"> <i class=""> </i> SOLUTIONS </a>
+				<a href="#trigonometry"> <i class=""> </i> TRIGONOMETRY </a>
+			</span>
+
+<audio autoplay>
+<source src="Claire de lune.ogg" type="audio/ogg">
+<source src="claire de lune.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+		<!-- Home articles -->
+			<a href="https://reliefweb.int/report/philippines/no-calm-after-storm-facing-climate-change-philippines" target="_blank">
+				<img src="home article 1.png" height="115px" width="115px" style="position:relative; left:40px; margin-right:50px; top:575px;
+				float:left; opacity:0.8">
+
+				<div class="ha1"> No calm after the storm: <div class="has1"> Facing climate change in the Philippines </div>
+
+				<div class="hass1"> <br> <br> For Filipino families living on the coast, the <br> end of a typhoon is just the beginning of their
+				<br> struggle. Julieta Cuya lives in the...
+
+				</div> </div>
+			</a>
+
+			<a href="https://www.nationalgeographic.com/environment/article/heat-related-deaths-attributed-to-climate-change" target="_blank">
+				<img src="home article 2.png" height="115px" width="115px" style="position:relative; margin-left:20px; margin-top:575px;
+				float:left; opacity:0.8">
+
+				<div class="ha2"> Heat waves kill people- <div class="has1"> and climate change is making it much, <br> much worse </div>
+
+				<div class="hass1"> <br> A recent study found that more than a third <br> of all heat deaths worldwide can be pinned <br> on
+				climate change. Parts of the...
+
+				</div> </div>
+			</a>
+
+			<a href="https://www.webmd.com/a-to-z-guides/news/20210708/climate-change-already-causes-5-million-extra-deaths-per-year" target="_blank">
+				<img src="home article 3.png" height="115px" width="115px" style="position:relative; margin-left:20px; margin-top:550px;
+				float:left; opacity:0.8">
+
+				<div class="ha2"> Climate Change Causes <div class="has1"> 5 Million Extra Deaths Per Year </div>
+
+				<div class="hass1"> <br> <br> A recent study found that more than a third <br> of all heat deaths worldwide can be pinned <br> on
+				climate change. Parts of the...
+
+				</div> </div>
+			</a>
+
+	<hr align="left" color="black" style="width:280px; position:relative; top:80px; left:80px; clear:left;">	
+
+		<!-- Home page bgs -->
+		<div class="home_bg bg2 home_topics bf" id="info">
+			<div class="home_topic1"> Climate Change </div>
+			<div class="home_subtopic1"> The term "climate change" refers to a shift in a location's typical weather patterns. This could be due to a shift in the amount of rain that a location receives on an annual basis. It could also be a month or season-long shift in a location's normal temperature. A change in the Earth's climate is also known as climate change. It's possible that this is due to a shift in the Earth's normal temperature. It could also represent a shift in the normal distribution of rain and snow on the planet. A long-term shift in global or regional climate patterns is referred to as climate change. Climate change is frequently used to refer to the rise in global temperatures from the mid-twentieth century to the present. </div>	
+		</div>
+
+		<div class="home_bg bg home_topics wf" id="evidences">
+			<div class="home_topic2"> Evidences of Climate Change </div>
+			<div class="home_subtopic2"> The climate of the Earth has shifted over time. There have been seven cycles of glacial advance and retreat in the last 650,000 years, with the abrupt end of the last ice age marking the start of the contemporary climate era and of human civilization. The majority of these climate shifts are due to minute changes in Earth's orbit that alter the quantity of solar energy received by our planet. <br>
+		<img src="climate change stats.gif" style="width:700px; height:450px; float:right; style="position:relative; margin-left:20px; margin-top:65px;">
+			<a href="Evidences of Climate Change.html"> 
+			<button class="btn_evidences"><i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+
+		<div class="home_bg bg3 home_topics bf" id="causes">
+			<div class="home_topic3"> Causes of Climate Change </div>
+			<div class="home_subtopic3"> The "greenhouse effect" warming that occurs when the atmosphere traps heat radiating from Earth toward space is attributed by scientists to the human expansion of the "greenhouse effect" warming that has been detected since the mid-twentieth century. The presence of some gases in the atmosphere prevents heat from escaping. Long-lived gases that remain in the atmosphere semi-permanently and do not respond physically or chemically to temperature changes are referred to as "forcing" climate change. "Feedbacks" are gases, such as water vapor, that react physically or chemically to temperature changes. <br>
+			<a href="Causes of Climate Change.html">
+			<button class="btn_causes"> <i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+
+		<div class="parallax">
+		<div class="home_topics wf" id="science">
+			<div class="home_topic4"> The Science of Climate Change: Radiation </div>
+			<div class="home_subtopic4"> To give us a quick overview of how radiation can affect climate change, the earth converts visible light energy into infrared light energy, which is absorbed by greenhouse gases and departs Earth slowly. <br>
+			<a href="Science of Climate Change.html">
+			<button class="btn_science"> <i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+		</div>
+
+		<div class="home_bg bg4 home_topics bf" id="effects">
+			<div class="home_topic5"> Effects of Climate Change </div>
+			<div class="home_subtopic5"> The environment has already been affected by global climate change. Glaciers have receded, ice on rivers and lakes has broken up earlier, plant and animal ranges have altered, and trees have begun to bloom earlier. Sea ice loss, rapid sea level rise, and longer, more intense heat waves are all effects that experts anticipated would occur as a result of global climate change in the past. <br>
+			<a href="Effects of Climate Change.html">
+			<button class="btn_effects"> <i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+
+
+		<div class="home_bg bg home_topics wf" id="solutions">
+		<div class="row">
+		<div class="column">
+			<div class="home_topic6"> Solutions for Climate Change </div>
+			<div class="home_subtopic6"> Climate change is happening now, and it’s the most serious threat to life on our planet. Fortunately, there are plenty of solutions to climate change, they are well-understood. <br>
+			<a href="Solutions for Climate Change.html"> 
+			<button class="btn_solutions"><i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+		<div class="column">
+			<div class="home_topic7" id="trigonometry"> Trigonometry for Climate Change </div>
+			<div class="home_subtopic7"> Trigonometry is everywhere. Aside from facts and informations, you will also encounter different problems about climate change in this web page that relate to trigonometric functions. 
+			<a href="Trigonometry for Climate Change.html"> <br>
+			<button class="btn_trigonometry"><i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+		</div>
+
+		<div class="home_bg bg5 home_topics blf" id="french">
+			<div class="home_topic8"> <b> Learn About Climate Change in French </b> </div>
+			<div class="home_subtopic8"> Climate change is global so it is only imperative to learn about it on other languages too. Click here and learn some new French words concerning climate change! <br>
+			<a href="Learn About Climate Change in French.html">
+			<button class="btn_french"> <i class="fas fa-arrow-right"></i> SEE MORE </button> </div>
+			</a>
+		</div>
+
+		<div class="home_bg bg home_topics wf" id="opinions">
+		<div class="row">
+		<div class="column">
+			<div class="home_topic9"> Our Opinions </div>
+			<div class="home_subtopic9"> Pagbabahagi ng mga sariling opinyon o pananaw batay sa napakinggan. <br>
+			<a href="Opinions in Climate Change.html"> 
+			<button class="btn_opinions"><i class="fas fa-arrow-right"></i> READ MORE </button> </div>
+			</a>
+		</div>
+		<div class="column">
+			<div class="home_topic10" id="communications"> Our Elements of Communication </div>
+			<div class="home_subtopic10"> Viewing the information in our webpage, I, Kirstine Zianne Alfaro, have observed at least six elements of communication. 
+			<a href="Communication.html"> <br>
+			<button class="btn_communication"><i class="fas fa-arrow-right"></i> READ MORE </button> </div>
+			</a>
+		</div>
+		</div>
+
+		<div class="home_topics bg bg6 wf" id="last">
+			<div class="home_topic11"> Stay Connected </div>
+			<img src="earth.png" width="100px" height="100px" style="margin-left:610px; margin-right:500px; margin-top:20px">
+			<img src="facebook.png" width="50px" height="50px" style="margin-left:550px; margin-top:0px">
+			<img src="instagram.png" width="50px" height="50px" style="margin-left:5px">
+			<img src="twitter.png" width="50px" height="50px" style="margin-left:5px">
+			<img src="google.png" width="50px" height="50px" style="margin-left:5px">
+
+	<hr color="white" style="width:430px; position:relative; top:10px; left:30px; clear:left;">	
+
+			<span class="navlinks2">
+			<a href="about us.html"> US </a>
+			<a href="#info"> INFO </a>
+			<a href="#last"> FEEDBACK </a>
+			<a href="#articles"> ARTICLES </a>
+			<a href="References for Climate Change.html"> REFERENCES </a>
+			<a href="#last"> HELP </a>
+			</span>
+
+
+			<div class="home_subtopic11"> This website was created by the Powell Team 1 of City of Mandaluyong Science High School 
+			<br> </div>
+
+			<div class="home_subtopic11">
+			Site Developer: Maien Pangilinan <br>
+			Web Designer: Wyndle Wyne Calansingin <br>
+			Program Manager: Joanna Mari Maravilla <br>
+			Subjects Heads: <br>
+			Vince Nathan Alfonso <br>
+			Kirstine Zianne Alfaro <br>
+			Princess Danielle Mendoza <br>
+			Juan Mendiola <br>
+			Kimberly Torcino <br>
+			</div>
+			</div>
+	<!-- JS for home page opening gallery -->
+	<script>
+		var slideIndex = 0; showSlides(); 
+
+		function showSlides() {var i; var slides = document.getElementsByClassName("home_gallery"); for (i = 0; i < slides.length; i++)
+		{slides[i].style.display = "none";}
+
+		slideIndex++; if (slideIndex > slides.length) 
+		{slideIndex = 1} slides[slideIndex-1].style.display = "block"; setTimeout(showSlides, 9500);} // Change image every 9.5 seconds
+	</script>
+
+	<!-- JS for home page opening gallery -->
+
+		<script>
+			/* Open */
+			function openNav() {document.getElementById("about").style.height = "100%";}
+
+			/* Close */
+			function closeNav() {document.getElementById("about").style.height = "0%";}
+		</script>
+		
+	</body>
+</html>
